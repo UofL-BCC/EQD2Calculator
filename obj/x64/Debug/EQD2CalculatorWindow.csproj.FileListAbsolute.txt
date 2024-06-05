@@ -1,0 +1,14 @@
+Q:\Physics Scripting\EQD2CalculatorWindow4\obj\x64\Debug\EQD2CalculatorWindow.csproj.AssemblyReference.cache
+Q:\Physics Scripting\EQD2CalculatorWindow4\obj\x64\Debug\UserControl1.g.cs
+Q:\Physics Scripting\EQD2CalculatorWindow4\obj\x64\Debug\UserControlASTROLegend.g.cs
+Q:\Physics Scripting\EQD2CalculatorWindow4\obj\x64\Debug\UserControl1.baml
+Q:\Physics Scripting\EQD2CalculatorWindow4\obj\x64\Debug\UserControlASTROLegend.baml
+Q:\Physics Scripting\EQD2CalculatorWindow4\obj\x64\Debug\EQD2CalculatorWindow.csproj.CoreCompileInputs.cache
+Q:\Physics Scripting\EQD2CalculatorWindow4\obj\x64\Debug\EQD2CalculatorWindow.csproj.CopyComplete
+Q:\plugins\EQD2CalculatorWindow4.esapi.dll
+Q:\plugins\EQD2CalculatorWindow4.esapi.pdb
+Q:\Physics Scripting\EQD2CalculatorWindow4\obj\x64\Debug\EQD2CalculatorWindow4.esapi_MarkupCompile.cache
+Q:\Physics Scripting\EQD2CalculatorWindow4\obj\x64\Debug\EQD2CalculatorWindow4.esapi_MarkupCompile.lref
+Q:\Physics Scripting\EQD2CalculatorWindow4\obj\x64\Debug\EQD2CalculatorWindow4.esapi.g.resources
+Q:\Physics Scripting\EQD2CalculatorWindow4\obj\x64\Debug\EQD2CalculatorWindow4.esapi.dll
+Q:\Physics Scripting\EQD2CalculatorWindow4\obj\x64\Debug\EQD2CalculatorWindow4.esapi.pdb

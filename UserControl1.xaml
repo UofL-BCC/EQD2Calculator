@@ -1,0 +1,290 @@
+﻿<UserControl x:Class="EQD2CalculatorWindow.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EQD2CalculatorWindow"
+             mc:Ignorable="d" 
+             d:DesignHeight="1100" d:DesignWidth="1600">
+    <UserControl.Background>
+        <SolidColorBrush Color="#FF96A2B7"/>
+    </UserControl.Background>
+    <Grid Name="OutermostGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="153*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="76*"/>
+            <RowDefinition Height="199*"/>
+        </Grid.RowDefinitions>
+
+
+
+        <CheckBox Name="ColorToggleButton" Margin="1045,708,470,71" Grid.Row="1"
+                     Content="Colors" FontSize="8" FontWeight="Bold" 
+                      ClickMode="Release" 
+                  Checked="ColorToggleButton_Checked" Unchecked="ColorToggleButton_Unchecked">
+            <CheckBox.RenderTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.RenderTransform>
+
+        </CheckBox>
+
+        <Grid Name="InnerEBRTHolderGrid" Grid.Row="0" Margin="0,0,1296,130">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="65*"/>
+                <RowDefinition Height="49*"/>
+                <RowDefinition Height="47*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85*"/>
+                <ColumnDefinition Width="58*"/>
+            </Grid.ColumnDefinitions>
+            <Border BorderThickness="1" BorderBrush="Black" CornerRadius="5" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+
+
+
+            <TextBox Text="External Beam Dose" BorderBrush="White" Height="20" VerticalAlignment="Top" Background="#FF96A2B7" BorderThickness="0"  Grid.ColumnSpan="2" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" Width="146" Margin="79,5,0,0"/>
+            <TextBox Text="Dose (Gy)" FontWeight="Bold" Grid.Column="0" Background="#FF96A2B7" BorderThickness="0"   BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top" Height="18" Width="57" Margin="8,25,0,0"/>
+            <TextBox Text=""  HorizontalAlignment="Left" VerticalAlignment="Top" 
+                     Height="18" Width="50" Margin="70,25,0,0" Name="ExternalDose1"/>
+            <TextBox
+                Text="" Grid.Column="1" Name="ExternalFx1"
+                         HorizontalAlignment="Center" VerticalAlignment="Top" Width="50"  Height="18" Margin="0,25,0,0"/>
+            <TextBox Text="" Grid.Row="1"   Name="ExternalDose2"
+                     HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Height="18" Margin="70,0,0,0"/>
+            <TextBox Text="" Grid.Row="1" Grid.Column="1" Width="50" Name="ExternalFx2"
+                         HorizontalAlignment="Center" VerticalAlignment="Center"  Height="18"/>
+            <TextBox Text="" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                           Width="50" Height="18" Margin="70,0,0,0" Name="ExternalDose3"/>
+            <TextBox Text="" Grid.Row="2"  Grid.Column="1" Width="50" Name="ExternalFx3"
+                         HorizontalAlignment="Center" VerticalAlignment="Center"  Height="18"/>
+            <TextBox Text="FXs"  Height="18" Width="30"  
+                         Grid.Column="1" Background="#FF96A2B7" BorderThickness="0"
+                         HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="white" FontWeight="Bold" Margin="6,25,0,0" />
+            <TextBox Text="Dose (Gy)" FontWeight="Bold" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57"
+                     BorderBrush="White" Height="18" Margin="8,13,0,0" Background="#FF96A2B7" BorderThickness="0" FontStyle="Oblique"/>
+            <TextBox Text="FXs" FontWeight="Bold"  Height="20" Grid.Row="1" Width="30" Grid.Column="1" 
+                         HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="white" Margin="6,12,0,0" Background="#FF96A2B7" FontStyle="Oblique" BorderThickness="0"/>
+            <TextBox Text="Dose (Gy)" FontWeight="Bold" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                          BorderBrush="White" Height="18" Width="57" Margin="8,0,0,0" Background="#FF96A2B7" BorderThickness="0" FontStyle="Oblique"/>
+            <TextBox Text="FXs" Height="20" FontWeight="Bold" Grid.Row="2" Width="30" Grid.Column="1" 
+                         HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Oblique" 
+                          BorderBrush="white" Margin="6,0,0,0" Background="#FF96A2B7" BorderThickness="0"/>
+
+        </Grid>
+        <Grid Name="alphabetagrid" Margin="0,174,1296,10" Panel.ZIndex="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="21*"/>
+                <RowDefinition Height="34*"/>
+                <RowDefinition Height="34*"/>
+                <RowDefinition Height="34*"/>
+            </Grid.RowDefinitions>
+            <TextBox Text="Alpha/Beta (α/β)"   FontWeight="Bold" Grid.ColumnSpan="2" Background="#FF96A2B7" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="102,0,0,0" Height="16" Width="100" />
+            <TextBox Text="Target" FontWeight="Bold" VerticalAlignment="Center"  Grid.Row="1" Background="#FF96A2B7" BorderThickness="0" Margin="10,0,94,0" Height="19"/>
+            <TextBox Text="" Name="HRCTVAlphaBetaTextBox" HorizontalAlignment="Left"  Grid.Row="1" Background="White" BorderThickness="1" Width="52" Margin="63,5,0,4"/>
+            <TextBox Text="Bladder" FontWeight="Bold" VerticalAlignment="Center"  Grid.Row="2" Background="#FF96A2B7" BorderThickness="0" Margin="10,0,94,0" Height="16"/>
+            <TextBox Text="" Name="BladderAlphaBetaTextBox" HorizontalAlignment="Left"  Grid.Row="2" Background="White" BorderThickness="1" Width="52" Margin="63,5,0,5"/>
+            <TextBox Text="Rectum" FontWeight="Bold" VerticalAlignment="Center"  Grid.Row="2" Grid.Column="1"  Background="#FF96A2B7" BorderThickness="0" Margin="4,0,100,0" Height="16"/>
+            <TextBox Text="" Name="RectumAlphaBetaTextBox" HorizontalAlignment="Left"  Grid.Row="2" Grid.Column="1" Background="White" BorderThickness="1" Width="52" Margin="63,5,0,5"/>
+            <TextBox Text="Bowel" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="0"  Grid.Row="3" Background="#FF96A2B7" BorderThickness="0" Margin="10,0,94,0" Height="16"/>
+            <TextBox Text="" Name="BowelAlphaBetaTextBox" HorizontalAlignment="Left"  Grid.Row="3" Grid.Column="0" Background="White" BorderThickness="1" Width="52" Margin="63,5,0,5"/>
+            <TextBox Text="Sigmoid" FontWeight="Bold"  VerticalAlignment="Center"  Grid.Row="1" Grid.Column="1" Background="#FF96A2B7" BorderThickness="0" Margin="2,0,89,0" Height="19"/>
+            <TextBox Text="" Name="SigmoidAlphaBetaTextBox" HorizontalAlignment="Left" Grid.Column="1"  Grid.Row="1" Background="White" BorderThickness="1" Width="52" Margin="63,5,0,4"/>
+            <Border Grid.ColumnSpan="2" Grid.RowSpan="3" BorderThickness="1" BorderBrush="Black" Margin="1,0,1,0" CornerRadius="5" Grid.Row="1"/>
+
+
+        </Grid>
+
+        <Grid Name="PlanHolderGrid" Margin="309,5,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="47*"/>
+                <RowDefinition Height="47*"/>
+                <RowDefinition Height="47*"/>
+                <RowDefinition Height="46*"/>
+                <RowDefinition Height="48*"/>
+                <RowDefinition Height="47*"/>
+                <RowDefinition Height="47*"/>
+                <RowDefinition Height="47*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Column="0" BorderThickness="1" BorderBrush="Black" Grid.RowSpan="8"/>
+
+
+            <TextBox Text="FXs" BorderBrush="white" Background="#FF96A2B7" Height="20" Width="25"  BorderThickness="0" Margin="172,6,61,10"/>
+            <TextBox Text="FXs" Grid.Column="1" BorderBrush="white" Background="#FF96A2B7" Height="20" Width="25"  BorderThickness="0"   HorizontalAlignment="Right" Margin="0,6,58,10"/>
+            <TextBox Text="FXs" Grid.Column="2" BorderBrush="white" Background="#FF96A2B7" Height="20" Width="25" Margin="175,8,59,8" BorderThickness="0"/>
+            <TextBox Text="FXs" Grid.Column="3" BorderBrush="white" Background="#FF96A2B7" Height="20" Width="25" Margin="179,8,54,8" BorderThickness="0"/>
+            <TextBox Text="FXs" Grid.Column="4" BorderBrush="white" Background="#FF96A2B7" Height="20" Width="25" Margin="179,8,54,8" BorderThickness="0"/>
+            <TextBox Text="" Grid.Column="0" x:Name="Plan1FxsTextBox" BorderBrush="white" Background="white" Height="20" Margin="197,6,15,10" BorderThickness="0"/>
+            <TextBox Text="" Grid.Column="1" x:Name="Plan2FxsTextBox" BorderBrush="white" Background="white" Height="20" Margin="201,6,10,10" BorderThickness="0"/>
+            <TextBox Text="" Grid.Column="2" x:Name="Plan3FxsTextBox" BorderBrush="white" Background="white" Height="20" Margin="200,8,12,8" BorderThickness="0"/>
+            <TextBox Text="" Grid.Column="3" x:Name="Plan4FxsTextBox" BorderBrush="white" Background="white" Height="20" Margin="204,8,8,8" BorderThickness="0"/>
+            <TextBox Text="" Grid.Column="4" x:Name="Plan5FxsTextBox" BorderBrush="white" Background="white" Height="20" Margin="204,8,8,8" BorderThickness="0"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.RowSpan="8" Grid.ColumnSpan="2" Margin="258,0,0,0"/>
+            <Border Grid.Column="1" BorderThickness="1" BorderBrush="Black" Grid.RowSpan="8" Grid.ColumnSpan="3" Margin="258,0,258,0"/>
+            <Border Grid.Column="3" BorderThickness="1" BorderBrush="Black" Grid.RowSpan="8" Grid.ColumnSpan="2" Margin="0,0,258,0"/>
+            <Border Grid.Column="4" BorderThickness="1" BorderBrush="Black" Grid.RowSpan="8"/>
+            <CheckBox x:Name="Plan1CheckBox" BorderBrush="black" Width="25" Height="25" 
+                      BorderThickness="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <CheckBox x:Name="Plan2CheckBox" Grid.Column="1" BorderBrush="black" Width="25" Height="25"
+                      BorderThickness="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <CheckBox x:Name="Plan3CheckBox" Grid.Column="2" BorderBrush="black" Width="25" Height="25"
+                      BorderThickness="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <CheckBox x:Name="Plan4CheckBox" Grid.Column="3" BorderBrush="black" Width="25" Height="25"
+                      BorderThickness="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <CheckBox x:Name="Plan5CheckBox" Grid.Column="4" BorderBrush="black" Width="25" Height="25"
+                      BorderThickness="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <TextBox x:Name="Plan1TextBox" Text="" Grid.Row="0" HorizontalAlignment="Left" Background="#FF96A2B7" Width="132" BorderBrush="White" Margin="35,6,0,11" BorderThickness="0"/>
+            <TextBox x:Name="Plan2TextBox" Text="" Grid.Column="1" Grid.Row="0" Background="#FF96A2B7" HorizontalAlignment="Left" Width="135" BorderBrush="White" Margin="35,9,0,13" BorderThickness="0"/>
+            <TextBox x:Name="Plan3TextBox" Text="" Grid.Column="2" Grid.Row="0" Background="#FF96A2B7" HorizontalAlignment="Left" Width="135" BorderBrush="White" Margin="35,10,0,14" BorderThickness="0"/>
+            <TextBox x:Name="Plan4TextBox" Text="" Grid.Column="3" Grid.Row="0" Background="#FF96A2B7" HorizontalAlignment="Left" Width="135" BorderBrush="White" Margin="39,8,0,15" BorderThickness="0"/>
+            <TextBox x:Name="Plan5TextBox" Text="" Grid.Column="4" Grid.Row="0" Background="#FF96A2B7" HorizontalAlignment="Left" Width="135" BorderBrush="White" Margin="40,8,0,15" BorderThickness="0"/>
+            <TextBlock Foreground="Black"  FontWeight="Bold" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Text="HRCTV"  Margin="10,0,0,0" FontSize="15" Height="20" Width="50" FontFamily="Gadugi"/>
+            <ComboBox  Grid.Column="0" Grid.Row="1" x:Name="ComboBoxCTV" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,0,0,0" Height="22"/>
+
+            <TextBlock Foreground="Black"  FontWeight="Bold" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2" Text="IRCTV"  Margin="10,0,0,0" FontSize="15" Height="20" Width="50" FontFamily="Gadugi"/>
+            <ComboBox  Grid.Column="0" Grid.Row="2" x:Name="ComboBoxIRCTV" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,0,0,0" Height="22"/>
+
+            <TextBlock Foreground="Black"  FontWeight="Bold" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="3" Text="GTV"  Margin="11,5,0,0" FontSize="15" Height="20" Width="50" FontFamily="Gadugi"/>
+            <ComboBox  Grid.Column="0" Grid.Row="3" x:Name="ComboBoxGTV" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,2,0,0" Height="22"/>
+
+            <TextBlock  Grid.Column="0" Foreground="black" FontWeight="Bold"  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="4" Text="Bladder"  Margin="10,7,0,0" FontSize="15" Height="20" Width="55"/>
+            <ComboBox Grid.Column="0" Grid.Row="4" x:Name="ComboBoxBladder" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" BorderBrush="AliceBlue" Margin="111,6,0,0" Height="22"  />
+            <TextBlock Grid.Column="0" Grid.Row="7" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"  Text="Rectum"  FontSize="15" Height="20" Width="54" Margin="12,0,0,0"/>
+            <ComboBox Grid.Column="0" Grid.Row="7" x:Name="ComboBoxRectum" HorizontalAlignment="Left" VerticalAlignment="Center" Width="137" BorderBrush="AliceBlue" Margin="111,0,0,0" Height="22"  />
+            <TextBlock Grid.Column="0" Grid.Row="6" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"  Text="Sigmoid"  Margin="11,10,0,0" FontSize="15" Height="20" Width="58"/>
+            <ComboBox Grid.Column="0" Grid.Row="6" x:Name="ComboBoxSigmoid" HorizontalAlignment="Left" VerticalAlignment="Center" Width="137" BorderBrush="AliceBlue" Margin="111,0,0,0" Height="22"  />
+            <TextBlock Grid.Column="0" Grid.Row="5" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"  Text="Bowel"  Margin="11,8,0,0" FontSize="15" Height="20" Width="86"/>
+            <ComboBox Grid.Column="0" Grid.Row="5" x:Name="ComboBoxSmallBowel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" BorderBrush="AliceBlue" Margin="111,6,0,0" Height="22"  />
+
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Text="HRCTV" FontWeight="Bold" Margin="10,6,0,0" FontSize="15" Height="20" Width="50"/>
+            <ComboBox  Grid.Column="1" x:Name="ComboBoxCTV1" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,4,0,0" Height="22" Grid.Row="1"/>
+
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2" Text="IRCTV" FontWeight="Bold" Margin="10,6,0,0" FontSize="15" Height="20" Width="50"/>
+            <ComboBox  Grid.Column="1" x:Name="ComboBoxIRCTV1" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,4,0,0" Height="22" Grid.Row="2"/>
+
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="3" Text="GTV" FontWeight="Bold" Margin="10,6,0,0" FontSize="15" Height="20" Width="50"/>
+            <ComboBox  Grid.Column="1" x:Name="ComboBoxGTV1" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,4,0,0" Height="22" Grid.Row="3"/>
+
+            <TextBlock  Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="4" Text="Bladder" FontWeight="Bold" Margin="10,6,0,0" FontSize="15" Height="20" Width="55"/>
+            <ComboBox Grid.Column="1" Grid.Row="4" x:Name="ComboBoxBladder1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" BorderBrush="AliceBlue" Margin="111,6,0,0" Height="22"  />
+            <TextBlock Grid.Column="1" Grid.Row="7" HorizontalAlignment="Left"  Text="Rectum" FontWeight="Bold" FontSize="15" Width="54" Margin="10,8,0,9"/>
+            <ComboBox Grid.Column="1" Grid.Row="7" x:Name="ComboBoxRectum1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" BorderBrush="AliceBlue" Margin="111,3,0,0" Height="22"  />
+            <TextBlock Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Top"  Text="Sigmoid" FontWeight="Bold" Margin="10,9,0,0" FontSize="15" Height="20" Width="58"/>
+            <ComboBox Grid.Column="1" Grid.Row="6" x:Name="ComboBoxSigmoid1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="137" BorderBrush="AliceBlue" Margin="111,0,0,0" Height="22"  />
+            <TextBlock Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top"  Text="Bowel" FontWeight="Bold" Margin="10,5,0,0" FontSize="15" Height="20" Width="50"/>
+            <ComboBox Grid.Column="1" Grid.Row="5" x:Name="ComboBoxSmallBowel1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="137" BorderBrush="AliceBlue" Margin="111,0,0,0" Height="22"  />
+
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Text="HRCTV" FontWeight="Bold" Margin="10,0,0,0" FontSize="15" Height="20" Width="50"/>
+            <ComboBox  Grid.Column="2" Grid.Row="1" x:Name="ComboBoxCTV2" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,0,0,0" Height="22" Grid.ColumnSpan="2"/>
+
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2" Text="IRCTV" FontWeight="Bold" Margin="10,0,0,0" FontSize="15" Height="20" Width="50"/>
+            <ComboBox  Grid.Column="2" Grid.Row="2" x:Name="ComboBoxIRCTV2" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,0,0,0" Height="22" Grid.ColumnSpan="2"/>
+
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="3" Text="GTV" FontWeight="Bold" Margin="12,5,0,0" FontSize="15" Height="20" Width="50"/>
+            <ComboBox  Grid.Column="2" Grid.Row="3" x:Name="ComboBoxGTV2" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,0,0,0" Height="22" Grid.ColumnSpan="2"/>
+
+
+            <TextBlock  Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="4" Text="Bladder" FontWeight="Bold" Margin="10,7,0,0" FontSize="15" Height="20" Width="55"/>
+            <ComboBox Grid.Column="2" Grid.Row="4" x:Name="ComboBoxBladder2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" BorderBrush="AliceBlue" Margin="111,5,0,0" Height="22"  />
+            <TextBlock Grid.Column="2" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Top"  Text="Rectum" FontWeight="Bold" FontSize="15" Height="20" Width="54" Margin="8,2,0,0"/>
+            <ComboBox Grid.Column="2" Grid.Row="7" x:Name="ComboBoxRectum2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" BorderBrush="AliceBlue" Margin="111,4,0,0" Height="22"  />
+            <TextBlock Grid.Column="2" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Top"  Text="Sigmoid" FontWeight="Bold" Margin="8,5,0,0" FontSize="15" Height="20" Width="58"/>
+            <ComboBox Grid.Column="2" Grid.Row="6" x:Name="ComboBoxSigmoid2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="137" BorderBrush="AliceBlue" Margin="111,0,0,0" Height="22"  />
+            <TextBlock Grid.Column="2" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top"  Text="Bowel" FontWeight="Bold" Margin="10,5,0,0" FontSize="15" Height="20" Width="86"/>
+            <ComboBox Grid.Column="2" Grid.Row="5" x:Name="ComboBoxSmallBowel2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="137" BorderBrush="AliceBlue" Margin="111,0,0,0" Height="22"  />
+
+            <TextBlock Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Text="HRCTV" FontWeight="Bold" Margin="10,0,0,0" FontSize="15" Height="20" Width="50"/>
+            <ComboBox  Grid.Column="3" Grid.Row="1" x:Name="ComboBoxCTV3" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,0,0,0" Height="22" Grid.ColumnSpan="2"/>
+
+            <TextBlock Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2" Text="IRCTV" FontWeight="Bold" Margin="10,0,0,0" FontSize="15" Height="20" Width="50"/>
+            <ComboBox  Grid.Column="3" Grid.Row="2" x:Name="ComboBoxIRCTV3" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,0,0,0" Height="22" Grid.ColumnSpan="2"/>
+
+            <TextBlock Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="3" Text="GTV" FontWeight="Bold" Margin="12,6,0,0" FontSize="15" Height="20" Width="50"/>
+            <ComboBox  Grid.Column="3" Grid.Row="3" x:Name="ComboBoxGTV3" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,0,0,0" Height="22" Grid.ColumnSpan="2"/>
+
+            <TextBlock  Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="4" Text="Bladder" FontWeight="Bold" Margin="10,6,0,0" FontSize="15" Height="20" Width="55"/>
+            <ComboBox Grid.Column="3" Grid.Row="4" x:Name="ComboBoxBladder3" HorizontalAlignment="Left" VerticalAlignment="Center" Width="137" BorderBrush="AliceBlue" Margin="111,0,0,0" Height="22"  />
+            <TextBlock Grid.Column="3" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Top"  Text="Rectum" FontWeight="Bold" FontSize="15" Height="20" Width="54" Margin="10,5,0,0"/>
+            <ComboBox Grid.Column="3" Grid.Row="7" x:Name="ComboBoxRectum3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" BorderBrush="AliceBlue" Margin="111,4,0,0" Height="22"  />
+            <TextBlock Grid.Column="3" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Top"  Text="Sigmoid" FontWeight="Bold" Margin="10,5,0,0" FontSize="15" Height="20" Width="58"/>
+            <ComboBox Grid.Column="3" Grid.Row="6" x:Name="ComboBoxSigmoid3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" BorderBrush="AliceBlue" Margin="111,5,0,0" Height="22"  />
+            <TextBlock Grid.Column="3" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top"  Text="Bowel" FontWeight="Bold" Margin="10,4,0,0" FontSize="15" Height="20" Width="86"/>
+            <ComboBox Grid.Column="3" Grid.Row="5" x:Name="ComboBoxSmallBowel3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" BorderBrush="AliceBlue" Margin="111,3,0,0" Grid.ColumnSpan="2" Height="22"  />
+
+            <TextBlock Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Text="HRCTV" FontWeight="Bold" Margin="10,0,0,0" FontSize="15" Height="20" Width="50"/>
+            <ComboBox  Grid.Column="4" Grid.Row="1" x:Name="ComboBoxCTV4" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,0,0,0" Height="22"/>
+
+            <TextBlock Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2" Text="IRCTV" FontWeight="Bold" Margin="10,0,0,0" FontSize="15" Height="20" Width="50"/>
+            <ComboBox  Grid.Column="4" Grid.Row="2" x:Name="ComboBoxIRCTV4" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,0,0,0" Height="22"/>
+
+            <TextBlock Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="3" Text="GTV" FontWeight="Bold" Margin="11,6,0,0" FontSize="15" Height="20" Width="50"/>
+            <ComboBox  Grid.Column="4" Grid.Row="3" x:Name="ComboBoxGTV4" Width="137" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Margin="111,0,0,0" Height="22"/>
+
+
+            <TextBlock  Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="4" Text="Bladder" FontWeight="Bold" Margin="10,1,0,0" FontSize="15" Height="20" Width="55"/>
+            <ComboBox Grid.Column="4" Grid.Row="4" x:Name="ComboBoxBladder4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" BorderBrush="AliceBlue" Margin="111,0,0,0" Height="22"  />
+            <TextBlock Grid.Column="4" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Top"  Text="Rectum" FontWeight="Bold" FontSize="15" Height="20" Width="54" Margin="11,2,0,0"/>
+            <ComboBox Grid.Column="4" Grid.Row="7" x:Name="ComboBoxRectum4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" BorderBrush="AliceBlue" Margin="113,4,0,0" Height="22"  />
+            <TextBlock Grid.Column="4" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Top"  Text="Sigmoid" FontWeight="Bold" Margin="10,8,0,0" FontSize="15" Height="20" Width="58"/>
+            <ComboBox Grid.Column="4" Grid.Row="6" x:Name="ComboBoxSigmoid4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" BorderBrush="AliceBlue" Margin="111,9,0,0" Height="22"  />
+            <TextBlock Grid.Column="4" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top"  Text="Bowel" FontWeight="Bold" Margin="10,6,0,0" FontSize="15" Height="20" Width="86"/>
+            <ComboBox Grid.Column="4" Grid.Row="5" x:Name="ComboBoxSmallBowel4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" BorderBrush="AliceBlue" Margin="111,3,0,0" Height="22"  />
+
+
+        </Grid>
+
+        <Button Name="ScreenshotButton"  HorizontalAlignment="Left" Width="180" Content="Capture Screen" FontSize="20" FontWeight="Bold" Click="ScreenshotButton_Click" Margin="124,710,0,26" Grid.Row="1"  />
+        <Button VerticalAlignment="Top" Height="60" Width="202"  FontSize="20" Grid.Row="1"
+                    Background="#FFE6E2E2" Content="Calculate Statictics" HorizontalAlignment="Left" FontWeight="Bold" x:Name="CalculateStatisticsButton" Click="CalculateStatisticsButton_Click" Margin="658,710,0,0" />
+
+        <!--Button VerticalAlignment="Top" Height="30" Width="202"  FontSize="20" Grid.Row="1"
+                    Background="#FFE6E2E2" Content="Copy to Clipboard" HorizontalAlignment="Right" FontWeight="Bold" x:Name="CopyClipboardTable" Click="CopyClipboard_Click" Margin="0,710,32,0" /-->
+
+        <!--ComboBox 
+                      VerticalAlignment="Top" FontWeight="Bold" HorizontalContentAlignment="Center" FontSize="20" SelectedIndex="0"   Height="30" x:Name="ClipBoardOrientationBox" BorderBrush="#FFB37070" Foreground="#FF331818" 
+            Margin="1355,740,32,0" Grid.Row="1" >
+            <ComboBoxItem Content="Table"/>
+            <ComboBoxItem Content="Row"/>
+        </ComboBox-->
+
+        <Button Name="Legend_Button" Margin="1298,708,104,28" Grid.Row="1" Content="ASTRO Guidelines" FontSize="20" FontWeight="Bold" Click="Legend_Button_Click" />
+
+
+        <DataGrid Name="ReportDataGrid" Margin="148,10,165,108" Grid.Row="1" LoadingRow="ReportDataGrid_LoadingRow" FontSize="15"  ColumnWidth="*" FontWeight="Bold">
+
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                <Grid Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DataGrid.CellStyle>
+
+
+
+        </DataGrid>
+
+
+
+
+    </Grid>
+</UserControl>
